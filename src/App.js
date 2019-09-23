@@ -3,7 +3,6 @@ import './App.css';
 import Navbar from './components/Navbar';
 import API from './adapters/API';
 import PlanetsContainer from './PlanetsContainer'
-import PlanetPage from './PlanetPage'
 
 
 class App extends React.Component {
@@ -51,8 +50,7 @@ render() {
   return (
     <div className="App">
       {<Navbar user={this.state.user} signUp={this.signUp} logIn={this.logIn} logOut={this.logOut}/>}
-      {this.state.user && !this.state.user.error ? <PlanetsContainer planets={this.state.planets} logOut={this.logOut} planetClick={this.planetClick}/> : null}
-      {this.state.user && !this.state.user.error ? <PlanetPage selectedPlanet={this.state.selectedPlanet}/> : null}
+      {this.state.user && !this.state.user.error ? <PlanetsContainer selectedPlanet={this.state.selectedPlanet} planets={this.state.planets} logOut={this.logOut} planetClick={this.planetClick}/> : null}
     </div>
   );
 }

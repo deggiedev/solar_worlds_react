@@ -1,8 +1,5 @@
 .App {
   text-align: center;
-  display:flex;
-  flex-direction:row;
-  justify-content: space-evenly;
 }
 
 .App-logo {
@@ -25,6 +22,8 @@
 }
 
 .planetContainer {
+  display: flex;
+  flex-wrap: wrap;
   border: 2px solid black;
   max-width: 300px;
 }
