@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-evenly;
 }
 
 .App-logo {
@@ -20,3 +23,15 @@
 .App-link {
   color: #09d3ac;
 }
+
+.planetContainer {
+  border: 2px solid black;
+  max-width: 300px;
+}
+
+.PlanetCard {
+  border: 2px solid black;
+  max-width: 200px;
+}
+
+
