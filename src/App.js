@@ -3,7 +3,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import API from './adapters/API';
 import MainContainer from './MainContainer'
-
+import AnswerPageContainer from './AnswerPageContainer'
+import {Route, Switch} from 'react-router-dom'
 
 class App extends React.Component {
 
@@ -59,7 +60,12 @@ render() {
     <div className="App">
       {<Navbar user={this.state.user} signUp={this.signUp} logIn={this.logIn} logOut={this.logOut}/>}
       {this.state.user && !this.state.user.error ? 
-      <MainContainer questions={this.state.questions} selectedPlanet={this.state.selectedPlanet} planets={this.state.planets} logOut={this.logOut} planetClick={this.planetClick}/> : null}
+      (<Switch>
+      <Route path={'/answer/:id'} component={AnswerPageContainer}/>
+      <Route path={'/'} render={() => <MainContainer questions={this.state.questions} selectedPlanet={this.state.selectedPlanet} planets={this.state.planets} logOut={this.logOut} planetClick={this.planetClick}/>}/>
+      </Switch>)
+       : null}
+     
     </div>
   );
 }
