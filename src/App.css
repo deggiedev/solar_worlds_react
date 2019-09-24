@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: black;
+  color: yellow
 }
 
 .App-logo {
@@ -21,16 +23,48 @@
   color: #09d3ac;
 }
 
-.planetContainer {
-  display: flex;
-  flex-wrap: wrap;
-  border: 2px solid black;
-  max-width: 300px;
+.Header {
+  color: yellow;
+  border: 2px solid white;
+}
+
+Nav {
+  color: yellow;
+  border: 2px solid white;
+  position: absolute
+}
+
+.planetCard, .planetPage {
+  display: inline-block;
 }
 
 .PlanetCard {
-  border: 2px solid black;
+  border: 2px solid white;
+  max-width: 400px;
+}
+
+.MainContainer {
+  border: 2px solid white;
+}
+
+.Question {
+  border: 2px solid white;
+  max-width: 700px;
+  background-color: black;
+  color: yellow;
+}
+
+img {
   max-width: 200px;
+}
+
+.PlanetsContainer {
+  max-width: 400px
+}
+
+.PlanetPage {
+  max-width: 700px;
+  border: 2px solid white;
 }
 
 
