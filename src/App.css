@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color: black;
-  color: yellow
+  color: yellow;
 }
 
 .App-logo {
@@ -34,10 +34,6 @@ Nav {
   position: absolute
 }
 
-.planetCard, .planetPage {
-  display: inline-block;
-}
-
 .PlanetCard {
   border: 2px solid white;
   max-width: 400px;
@@ -59,7 +55,11 @@ img {
 }
 
 .PlanetsContainer {
-  max-width: 400px
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  
 }
 
 .PlanetPage {
@@ -67,4 +67,38 @@ img {
   border: 2px solid white;
 }
 
+.ShortAnswer {
+  max-width: 700px;
+  border: 2px solid white;
+}
 
+.ExtraAnswerInfo {
+  max-width: 700px;
+  border: 2px solid white;
+}
+
+.AnswerPageContainer {
+  background-color: black
+}
+
+.MoonPic {
+  max-width: 50px;
+}
+
+.ShowMoons {
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.ImageGallery {
+  max-width: 100px;
+  border: 2px solid white;
+}
+
+.ImageContainer {
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  border: 2px solid white;
+}

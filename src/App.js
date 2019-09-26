@@ -55,6 +55,10 @@ class App extends React.Component {
       this.setState({selectedPlanet: planetObj})
   }
 
+  handleMoonClick = () => {
+    this.setState({showMoons: !this.state.showMoons})
+  }
+
 render() {
   return (
     <div className="App">

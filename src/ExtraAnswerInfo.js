@@ -6,7 +6,8 @@ class ExtraAnswerInfo extends React.Component {
 render() {
   return (
         <div className="ExtraAnswerInfo" >
-          <h1>AnswerPageContainer</h1>
+          <h4>Did You Know?</h4>
+          <h5>{this.props.answer.didyouknow}</h5>
         </div>
         );
     }
