@@ -1,57 +1,72 @@
+html {
+  background-color: black
+}
+
 .App {
   text-align: center;
   background-color: black;
-  color: yellow;
+  color: white
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+@font-face {
+  font-family: "SEGA LOGO FONT";
+  font-style: normal;
+  font-weight: lighter;
+  src: local("SEGA LOGO FONT"), url("SEGA.woff") format("woff");
 }
 
 .Header {
   color: yellow;
-  border: 2px solid white;
+  font-family: "SEGA LOGO FONT";
+  font-weight: lighter;
+  font-size: 3em;
+  position: relative;
+  bottom: 50px;
+}
+
+.NasaLogo {
+  max-width: 100px;
+  position: relative;
+  top: 50px;
+  margin-left: 600px;
+}
+
+.LogOutButton {
+  margin-left: 0x;
+  top:18px
+}
+
+.HeaderType {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
 
 Nav {
-  color: yellow;
-  border: 2px solid white;
-  position: absolute
-}
-
-.PlanetCard {
-  border: 2px solid white;
-  max-width: 400px;
-}
-
-.MainContainer {
-  border: 2px solid white;
-}
-
-.Question {
-  border: 2px solid white;
-  max-width: 700px;
   background-color: black;
   color: yellow;
 }
 
+.PlanetCard {
+  text-align: center;
+	-moz-box-shadow: 4px 4px 5px #888888;
+	box-shadow: 4px 4px 5px #888888;
+	margin-top: 10px;
+  border: 2px solid yellow;
+  max-width: 300px;
+}
+
+.Question {
+  text-align: center;
+	-moz-box-shadow: 4px 4px 5px #888888;
+	box-shadow: 4px 4px 5px #888888;
+	margin-top: 10px;
+  border: 2px solid yellow;
+  background-color: black;
+}
+
 img {
-  max-width: 200px;
+  max-width: 150px;
 }
 
 .PlanetsContainer {
@@ -62,23 +77,39 @@ img {
   
 }
 
-.PlanetPage {
+.PlanetPage {  
+	margin-top: 10px;
   max-width: 700px;
-  border: 2px solid white;
+  position: relative;
+  left: 400px;
+  bottom: 1973px
 }
 
 .ShortAnswer {
-  max-width: 700px;
-  border: 2px solid white;
+  text-align: center;
+	-moz-box-shadow: 4px 4px 5px #888888;
+	box-shadow: 4px 4px 5px #888888;
+	margin-top: 10px;
+  border: 2px solid yellow;
 }
 
 .ExtraAnswerInfo {
-  max-width: 700px;
-  border: 2px solid white;
+  text-align: center;
+	-moz-box-shadow: 4px 4px 5px #888888;
+	box-shadow: 4px 4px 5px #888888;
+	margin-top: 10px;
+  border: 2px solid yellow;
 }
 
 .AnswerPageContainer {
-  background-color: black
+  text-align: center;
+	-moz-box-shadow: 4px 4px 5px #888888;
+	box-shadow: 4px 4px 5px #888888;
+	margin-top: 10px;
+  background-color: black;
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .MoonPic {
@@ -92,13 +123,40 @@ img {
 }
 
 .ImageGallery {
+  text-align: center;
+	-moz-box-shadow: 4px 4px 5px #888888;
+	box-shadow: 4px 4px 5px #888888;
+	margin-top: 10px;
   max-width: 100px;
-  border: 2px solid white;
+  border: 2px solid yellow;
 }
 
 .ImageContainer {
+  text-align: center;
+	-moz-box-shadow: 4px 4px 5px #888888;
+	box-shadow: 4px 4px 5px #888888;
+	margin-top: 10px;
   display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-  border: 2px solid white;
+}
+
+.PlanetImage {
+  max-width: 300px
+}
+
+.Progress {
+  text-align: center;
+	-moz-box-shadow: 4px 4px 5px #888888;
+	box-shadow: 4px 4px 5px #888888;
+	margin-top: 10px;
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.Progressbar{
+  max-width: 80px;
+  position: relative;
+  left: 500px;
 }

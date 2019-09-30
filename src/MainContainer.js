@@ -3,6 +3,7 @@ import './App.css';
 import PlanetsContainer from './PlanetsContainer'
 import PlanetPage from './PlanetPage'
 import Header from './components/Header'
+import Progress from './components/Progress'
 
 class MainContainer extends React.Component {
    
@@ -10,7 +11,8 @@ class MainContainer extends React.Component {
     return (
       <div className="MainContainer">
         
-        <Header />
+        <Header progress={this.props.progress.length}/>
+        <Progress progress={this.props.progress.length} />
         <PlanetsContainer selectedPlanet={this.props.selectedPlanet} planets={this.props.planets} planetClick={this.props.planetClick}/>
         <PlanetPage questions={this.props.questions} selectedPlanet={this.props.selectedPlanet}/>
       </div>

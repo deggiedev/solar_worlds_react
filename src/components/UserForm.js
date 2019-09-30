@@ -7,15 +7,15 @@ const SignupForm = ({ submit, header }) => {
     const [password, setPassword] = useState('')
 
     return (
-        <form onSubmit={e => {
+        <form className={"Form"} onSubmit={e => {
             e.preventDefault();
             submit({ username, password })
             setUsername('')
             setPassword('')
         }}>
-            <span>{header}</span>
-            <input placeholder="Username" type="username" name="username" value={username} onChange={e => setUsername(e.target.value)} />
-            <input placeholder="Password" type="password" name="password" value={password} onChange={e => setPassword(e.target.value)} />
+            <span className={"HeaderType"}>{header}</span>
+            <input className={"UsernameInput"} placeholder="Username..." type="username" name="username" value={username} onChange={e => setUsername(e.target.value)} />
+            <input className={"PasswordInput"} placeholder="Password..." type="password" name="password" value={password} onChange={e => setPassword(e.target.value)} />
             <input type="submit" />
         </form>
     )

@@ -15,6 +15,7 @@ class AnswerPageContainer extends React.Component {
     state = {
         answer: [],
         currentPlanet: null,
+        pageRead: null
     }
 
     componentDidMount() {
@@ -22,11 +23,25 @@ class AnswerPageContainer extends React.Component {
         .then(answer => this.setState({answer, currentPlanet: answer.answer.split(' ')[0].toLowerCase()}))
     }
 
+    handleReadPost = (answerId) => {
+        fetch('http://localhost:3000/reads', {
+            method: 'POST',
+            body: JSON.stringify({
+                answer_id: answerId,
+                count: 1
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem('token')
+            }
+        })
+    }
+
 render() {
   return (
         <div className="AnswerPageContainer" >
           <AnswerHeader answer={this.state.answer}/>
-          <ShortAnswer answer={this.state.answer} />
+          <ShortAnswer handleReadPost={this.handleReadPost} answer={this.state.answer} />
           <ExtraAnswerInfo answer={this.state.answer}/>
           <ImageContainer currentPlanet={this.state.currentPlanet}/>
         </div>

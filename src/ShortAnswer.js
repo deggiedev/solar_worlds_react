@@ -8,7 +8,7 @@ render() {
         <div className="ShortAnswer" >
             <h4>Short Answer</h4>
           <h5>{this.props.answer.answer}</h5>
-          <button>read</button>
+          <button onClick={() => this.props.handleReadPost(this.props.answer.id)}>read</button>
         </div>
         );
     }

@@ -9,7 +9,6 @@ render() {
     <div className="PlanetPage">
       <PlanetOverview selectedPlanet={this.props.selectedPlanet}/> 
       <QuestionContainer questions={this.props.questions} selectedPlanet={this.props.selectedPlanet}/>
-
     </div>
   );
 }

@@ -11,8 +11,12 @@ class App extends React.Component {
   state = {
     user: undefined,
     planets: [],
-    selectedPlanet: [],
-    questions: []
+    selectedPlanet: {
+    "englishName": "Sun"
+    },
+    questions: [],
+    reads: [],
+    userProgress: null
   }
 
   getPlanets = () => {
@@ -25,6 +29,11 @@ class App extends React.Component {
    .then(resp => resp.json())
  }
 
+ getReads = () => {
+   return fetch('http://localhost:3000/reads')
+   .then(resp => resp.json())
+ }
+
   componentDidMount() {
     API.validateUser()
       .then(user => {
@@ -34,6 +43,8 @@ class App extends React.Component {
       .then(planets => this.setState({ planets }))
       .then(this.getQuestions) 
       .then(questions => this.setState({questions}))  
+      .then(this.getReads)
+      .then(reads => this.setState({reads}))
   }
 
   signUp = user => {
@@ -59,6 +70,12 @@ class App extends React.Component {
     this.setState({showMoons: !this.state.showMoons})
   }
 
+  updateUserProgress = (user) => {
+    if(this.state.reads) {
+      return this.state.reads.filter(read => read.user_id === user.id)
+    }
+  }
+
 render() {
   return (
     <div className="App">
@@ -66,7 +83,7 @@ render() {
       {this.state.user && !this.state.user.error ? 
       (<Switch>
       <Route path={'/answer/:id'} component={AnswerPageContainer}/>
-      <Route path={'/'} render={() => <MainContainer questions={this.state.questions} selectedPlanet={this.state.selectedPlanet} planets={this.state.planets} logOut={this.logOut} planetClick={this.planetClick}/>}/>
+      <Route path={'/'} render={() => <MainContainer progress={this.updateUserProgress(this.state.user)} questions={this.state.questions} selectedPlanet={this.state.selectedPlanet} planets={this.state.planets} logOut={this.logOut} planetClick={this.planetClick}/>}/>
       </Switch>)
        : null}
      
