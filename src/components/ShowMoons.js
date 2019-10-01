@@ -8,7 +8,7 @@ render() {
         <div className="ShowMoons">
             {this.props.selectedPlanet.moons.map(moon => 
             <>
-            <h5>{moon.moon}</h5>
+            <h5 className={'MoonName'}>{moon.moon}</h5>
             <img className={'MoonPic'} alt={''} src={MoonPic}></img>
             </>
             )}

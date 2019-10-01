@@ -3,6 +3,7 @@ import AnswerHeader from './AnswerHeader'
 import ShortAnswer from './ShortAnswer'
 import ExtraAnswerInfo from './ExtraAnswerInfo'
 import ImageContainer from './ImageContainer'
+import {withRouter} from 'react-router-dom'
 
 
 class AnswerPageContainer extends React.Component {
@@ -40,6 +41,7 @@ class AnswerPageContainer extends React.Component {
 render() {
   return (
         <div className="AnswerPageContainer" >
+          <button onClick={() => this.props.history.push(`/`)}>Home</button>
           <AnswerHeader answer={this.state.answer}/>
           <ShortAnswer handleReadPost={this.handleReadPost} answer={this.state.answer} />
           <ExtraAnswerInfo answer={this.state.answer}/>
@@ -49,4 +51,4 @@ render() {
     }
 }
 
-export default AnswerPageContainer;
+export default withRouter(AnswerPageContainer);
