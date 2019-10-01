@@ -17,7 +17,7 @@ class ProgressBar extends React.Component {
     return (
       <div className="ProgressBar">
         <h5 className={'ProgressHeader'}>PROGRESS</h5>
-        <Progress size='medium' inverted color='black' percent={this.convertToPercentage()}  progress /> 
+        <Progress size='medium' inverted color='blue' percent={this.convertToPercentage()}  progress /> 
       </div>
       );
     }

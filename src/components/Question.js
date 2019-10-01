@@ -1,12 +1,13 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom'
+import { Button } from 'semantic-ui-react'
 
 class Question extends React.Component {
 
 render() {
   return (
-        <div className="Question" onClick={() => this.props.history.push(`/answer/${this.props.question.answer.id}`)}>
-            <h3>{this.props.question.question}</h3>   
+        <div >
+            <Button size='massive' inverted color='yellow' className="Question" onClick={() => this.props.history.push(`/answer/${this.props.question.answer.id}`)} fluid>{this.props.question.question}</Button><br></br>   
         </div>
         );
     }

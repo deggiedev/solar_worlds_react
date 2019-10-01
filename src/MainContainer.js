@@ -10,7 +10,7 @@ class MainContainer extends React.Component {
     return (
       <div className="MainContainer">
         
-        <Header progress={this.props.progress.length}/>
+        <Header />
         <ProgressBar progress={this.props.progress.length} />
         <PlanetsContainer questions={this.props.questions} selectedPlanet={this.props.selectedPlanet} planets={this.props.planets} planetClick={this.props.planetClick}/>
       </div>
