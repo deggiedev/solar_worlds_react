@@ -6,7 +6,7 @@ class MoonCard extends React.Component {
 render() {
   return (
         <div className="MoonCard">
-            <h5 className={'MoonName'}>{this.props.moon.moon}</h5>
+           <br></br><h5 className={'MoonName'}>{this.props.moon.moon}</h5>
             <img className={'MoonPic'} alt={''} src={MoonPic}></img>
         </div>
         );
