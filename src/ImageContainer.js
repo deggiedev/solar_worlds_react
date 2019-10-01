@@ -1,4 +1,6 @@
 import React from 'react';
+import Gallery from 'react-grid-gallery';
+
 
 class ImageContainer extends React.Component {
    

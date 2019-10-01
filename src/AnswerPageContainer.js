@@ -1,9 +1,8 @@
 import React from 'react';
-import AnswerHeader from './AnswerHeader'
 import ShortAnswer from './ShortAnswer'
-import ExtraAnswerInfo from './ExtraAnswerInfo'
 import ImageContainer from './ImageContainer'
 import {withRouter} from 'react-router-dom'
+import { Button } from 'semantic-ui-react'
 
 
 class AnswerPageContainer extends React.Component {
@@ -35,16 +34,13 @@ class AnswerPageContainer extends React.Component {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('token')
             }
-        })
+        }).then(this.setState({pageRead: true}))
     }
 
 render() {
   return (
         <div className="AnswerPageContainer" >
-          <button onClick={() => this.props.history.push(`/`)}>Home</button>
-          <AnswerHeader answer={this.state.answer}/>
-          <ShortAnswer handleReadPost={this.handleReadPost} answer={this.state.answer} />
-          <ExtraAnswerInfo answer={this.state.answer}/>
+          <ShortAnswer pageRead={this.state.PageRead} handleReadPost={this.handleReadPost} answer={this.state.answer} />
           <ImageContainer currentPlanet={this.state.currentPlanet}/>
         </div>
         );

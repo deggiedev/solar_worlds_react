@@ -9,9 +9,10 @@ class MainContainer extends React.Component {
   render() {
     return (
       <div className="MainContainer">
-        
+        <div className="MainHeaderAndProgress">
         <Header />
         <ProgressBar progress={this.props.progress.length} />
+        </div>
         <PlanetsContainer questions={this.props.questions} selectedPlanet={this.props.selectedPlanet} planets={this.props.planets} planetClick={this.props.planetClick}/>
       </div>
       );
