@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import PlanetsContainer from './PlanetsContainer'
-import PlanetPage from './PlanetPage'
 import Header from './components/Header'
 import ProgressBar from './components/ProgressBar'
 
