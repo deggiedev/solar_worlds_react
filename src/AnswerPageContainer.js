@@ -2,8 +2,6 @@ import React from 'react';
 import ShortAnswer from './ShortAnswer'
 import ImageContainer from './ImageContainer'
 import {withRouter} from 'react-router-dom'
-import { Button } from 'semantic-ui-react'
-
 
 class AnswerPageContainer extends React.Component {
 
@@ -41,7 +39,7 @@ render() {
   return (
         <div className="AnswerPageContainer" >
           <ShortAnswer pageRead={this.state.PageRead} handleReadPost={this.handleReadPost} answer={this.state.answer} />
-          <ImageContainer currentPlanet={this.state.currentPlanet}/>
+          <ImageContainer answer={this.state.answer} currentPlanet={this.state.currentPlanet}/>
         </div>
         );
     }

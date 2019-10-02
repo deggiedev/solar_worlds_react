@@ -1,29 +1,32 @@
 import React from 'react';
-import Gallery from 'react-grid-gallery';
-
 
 class ImageContainer extends React.Component {
    
-    getImages = () => {
-        return fetch(`https://images-api.nasa.gov/search?q=${this.props.currentPlanet}`)
-        .then(resp => resp.json())
-    }
+   // getImages = () => {
+   //     return fetch(`https://images-api.nasa.gov/search?q=${this.props.currentPlanet}`)
+   //     .then(resp => resp.json())
+   // }
 
-    state = {
-        images: []
-    }
+   // state = {
+   //     images: []
+   // }
     
-    componentDidUpdate(prevprops) {
-       if(prevprops) {
-           this.getImages()
-        .then(images => this.setState({images: images.collection.items}))
-       }
-    }
+   // componentDidUpdate(prevprops) {
+   //    if(prevprops) {
+   //        this.getImages()
+   //     .then(images => this.setState({images: images.collection.items}))
+   //    }
+   // }
 
 render() {
   return (
         <div className="ImageContainer" >
-            {this.state.images.map(object => <img className={'ImageGallery'} src={object.links[0].href}></img>)}
+          
+                <img className={'ImageGallery'} src={this.props.answer.image1}></img>
+                <img className={'ImageGallery'} src={this.props.answer.image2}></img>
+                <img className={'ImageGallery'} src={this.props.answer.image3}></img>
+                <img className={'ImageGallery'} src={this.props.answer.image4}></img>
+    
         </div>
         );
     }

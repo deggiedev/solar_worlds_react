@@ -1,6 +1,7 @@
 import React from 'react';
 import PlanetOverview from './components/PlanetOverview'
 import QuestionContainer from './components/QuestionContainer'
+import Twitter from './components/Twitter'
 
 class PlanetPage extends React.Component {
 

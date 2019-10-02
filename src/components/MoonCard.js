@@ -1,5 +1,5 @@
 import React from 'react';
-import MoonPic from '../images/moon.png'
+import MoonPic from '../images/moons.png'
 
 class MoonCard extends React.Component {
 

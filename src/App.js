@@ -192,11 +192,14 @@ class App extends React.Component {
 render() {
   return (
     <div className="App">
-      {<Navbar user={this.state.user} signUp={this.signUp} logIn={this.logIn} logOut={this.logOut}/>}
+      <div id='stars'></div>
+      <div id='stars2'></div>
+      <div id='stars3'></div>
+      {<Navbar className="Navbar" user={this.state.user} signUp={this.signUp} logIn={this.logIn} logOut={this.logOut}/>}
       {this.state.user && !this.state.user.error ? 
       (<Switch>
       <Route path={'/answer/:id'} component={AnswerPageContainer}/>
-      <Route path={'/'} render={() => <MainContainer progress={this.updateUserProgress(this.state.user)} questions={this.state.questions} selectedPlanet={this.state.selectedPlanet} planets={this.state.planets} logOut={this.logOut} planetClick={this.planetClick}/>}/>
+      <Route path={'/'} render={() => <MainContainer user={this.state.user} progress={this.updateUserProgress(this.state.user)} questions={this.state.questions} selectedPlanet={this.state.selectedPlanet} planets={this.state.planets} logOut={this.logOut} planetClick={this.planetClick}/>}/>
       </Switch>)
        : null}
      

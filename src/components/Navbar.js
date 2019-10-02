@@ -6,14 +6,17 @@ import { Button } from 'semantic-ui-react'
 
 const Navbar = ({ user, signUp, logIn, logOut }) => {
     return (
+        
         <nav>
             {
                 user && !user.error ? <div className={'NavB'}><Button inverted color="white" className="LogOutButton" onClick={logOut}>Log out</Button></div> :
-                    <>
-                        <Header className={'Header'} />
-                        <UserForm submit={signUp} header={'Sign up'} />
-                        <UserForm submit={logIn} header={'Log in'} />
-                    </>
+                    <div className="LoggedOutDiv">
+                            <Header className={'Header'}></Header> 
+                        <div className="SideBySideForms">
+                            <UserForm submit={signUp} header={'Sign up'}></UserForm><br></br> 
+                            <UserForm submit={logIn} header={'Log in'}></UserForm> 
+                        </div>
+                    </div>
             }
         </nav>
     )
