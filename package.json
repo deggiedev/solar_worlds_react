@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "grommet": "^2.7.8",
+    "iframe": "^1.0.0",
     "polished": "^3.4.1",
     "react": "^16.9.0",
     "react-circular-progressbar": "^2.0.2",
     "react-dom": "^16.9.0",
     "react-grid-gallery": "^0.5.5",
+    "react-iframe": "^1.8.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.2",

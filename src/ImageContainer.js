@@ -25,7 +25,6 @@ render() {
                 <img alt='' className={'ImageGallery'} src={this.props.answer.image2}></img>
                 <img alt='' className={'ImageGallery'} src={this.props.answer.image3}></img>
                 <img alt='' className={'ImageGallery'} src={this.props.answer.image4}></img>
-    
         </div>
         );
     }

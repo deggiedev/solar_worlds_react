@@ -4,6 +4,7 @@ import './stars.css';
 import PlanetsContainer from './PlanetsContainer'
 import Header from './components/Header'
 import ProgressBar from './components/ProgressBar'
+import NasaTv from './NasaTv'
 
 class MainContainer extends React.Component {
 
@@ -21,6 +22,7 @@ class MainContainer extends React.Component {
         <ProgressBar progress={this.props.progress.length} />
         <div className="SideAndPlanetContainer">
         <PlanetsContainer questions={this.props.questions} selectedPlanet={this.props.selectedPlanet} planets={this.props.planets} planetClick={this.props.planetClick}/>
+        
         <>
           <h1></h1>
           <h1></h1>
