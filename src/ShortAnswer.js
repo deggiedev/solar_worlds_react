@@ -14,7 +14,7 @@ render() {
               <p>{this.props.answer.answer}</p>
               <h4>Did You Know...</h4>
               <p>{this.props.answer.didyouknow}</p>
-              <Button inverted color='green' onClick={() => this.props.handleReadPost(this.props.answer.id)} fluid>read</Button><br></br><br></br>
+              <Button className="ReadButton" inverted color='green' onClick={() => this.props.handleReadPost(this.props.answer.id)} fluid>read</Button><br></br><br></br>
               <Button inverted color='white' onClick={() => this.props.history.push(`/`)}>Home</Button>
           </Container>  
         );

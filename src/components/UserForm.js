@@ -1,6 +1,6 @@
   
 import React, { useState } from 'react'
-import {Input, Button, Form, Segment } from 'semantic-ui-react'
+import {Input, Button, Form} from 'semantic-ui-react'
 
 const SignupForm = ({ submit, header }) => {
 

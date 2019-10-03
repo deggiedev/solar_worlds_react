@@ -6,6 +6,7 @@ import MainContainer from './MainContainer'
 import AnswerPageContainer from './AnswerPageContainer'
 import {Route, Switch} from 'react-router-dom'
 
+
 class App extends React.Component {
 
   state = {
@@ -184,25 +185,24 @@ class App extends React.Component {
   }
 
   updateUserProgress = (user) => {
-    if(this.state.reads) {
+    
       return this.state.reads.filter(read => read.user_id === user.id)
-    }
+      
+    
   }
 
 render() {
   return (
     <div className="App">
-      <div id='stars'></div>
-      <div id='stars2'></div>
-      <div id='stars3'></div>
+      
       {<Navbar className="Navbar" user={this.state.user} signUp={this.signUp} logIn={this.logIn} logOut={this.logOut}/>}
       {this.state.user && !this.state.user.error ? 
       (<Switch>
       <Route path={'/answer/:id'} component={AnswerPageContainer}/>
-      <Route path={'/'} render={() => <MainContainer user={this.state.user} progress={this.updateUserProgress(this.state.user)} questions={this.state.questions} selectedPlanet={this.state.selectedPlanet} planets={this.state.planets} logOut={this.logOut} planetClick={this.planetClick}/>}/>
+      <Route path={'/'} render={() => <MainContainer user={this.state.user} progress={this.updateUserProgress(this.state.user)} questions={this.state.questions} selectedPlanet={this.state.selectedPlanet} planets={this.state.planets} logOut={this.logOut} planetClick={this.planetClick}/>}/>      
       </Switch>)
        : null}
-     
+       
     </div>
   );
 }

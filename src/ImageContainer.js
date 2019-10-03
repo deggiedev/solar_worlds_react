@@ -21,11 +21,10 @@ class ImageContainer extends React.Component {
 render() {
   return (
         <div className="ImageContainer" >
-          
-                <img className={'ImageGallery'} src={this.props.answer.image1}></img>
-                <img className={'ImageGallery'} src={this.props.answer.image2}></img>
-                <img className={'ImageGallery'} src={this.props.answer.image3}></img>
-                <img className={'ImageGallery'} src={this.props.answer.image4}></img>
+                <img alt='' className={'ImageGallery'} src={this.props.answer.image1}></img>
+                <img alt='' className={'ImageGallery'} src={this.props.answer.image2}></img>
+                <img alt='' className={'ImageGallery'} src={this.props.answer.image3}></img>
+                <img alt='' className={'ImageGallery'} src={this.props.answer.image4}></img>
     
         </div>
         );
