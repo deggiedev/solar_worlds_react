@@ -23,8 +23,6 @@ class AnswerPageContainer extends React.Component {
         document.body.scrollTop = 0;
     }
 
-  
-
     handleReadPost = (answerId) => {
         fetch('http://localhost:3000/reads', {
             method: 'POST',

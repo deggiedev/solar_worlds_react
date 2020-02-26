@@ -400,6 +400,8 @@ class App extends React.Component {
   }
 
 render() {
+  this.getReads()
+  .then(reads => this.setState({reads}))
   return (
     <div className="App">
       
